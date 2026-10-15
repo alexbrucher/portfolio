@@ -24,7 +24,7 @@ window.portfolioProjects = [
         alt: "Clean cookstove testing",
       },
     ],
-    problemLead: "Families need cleaner cooking without equipment that exceeds local manufacturing capabilities.",
+    problemLead: "Two billion people cook on open fires. These nations need affordable, clean-burning stoves that fit local cooking practices.",
     problem: "I worked with one other engineer to adapt existing cookstove designs for families in Senegal and Sierra Leone. These stoves required greater firepower to accommodate larger families and different top shapes to fit the traditional cooking vessels in each country. We also had to balance thermal efficiency with the cost of uninsulated sheet-metal construction, variable tolerances, limited equipment, and intermittent electricity during manufacturing. Observations, interviews, user tests, and partner input from West Wind Energy informed the work; much of that information was collected before my internship.",
     solutionLead: "Four adapted prototypes exceeded 40% thermal efficiency in testing.",
     solution: "We adapted existing wood- and charcoal-burning BDL stoves to suit the specific needs of each country while maintaining manufacturing processes. Faster heat-up was a design motivation because users sometimes overloaded fuel to accelerate heating, which could undermine emissions performance. The intended selling price was approximately $30 including profit. At the end of my involvement, intended next steps were local manufacture, beta field testing, and sales through West Wind Energy in Freetown, Sierra Leone.",
