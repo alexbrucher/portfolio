@@ -49,7 +49,7 @@ nav a.active::after { position: absolute; right: 0; bottom: 0; left: 0; height: 
 .project-card-main .project-card-skills { margin-top: 8px; color: var(--blue); font: 700 .65rem var(--mono); letter-spacing: .03em; text-transform: uppercase; }
 .project-card-main .project-card-client { margin-top: 8px; }
 .project-card-end { display: flex; align-items: center; justify-content: space-between; color: var(--muted); font: .72rem var(--mono); }
-.project-card-end b { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); font-size: 1rem; transition: background .18s, color .18s; }
+.project-card-end b { display: grid; flex: 0 0 34px; place-items: center; width: 34px; height: 34px; aspect-ratio: 1; padding: 0; border: 1px solid var(--ink); border-radius: 50%; color: var(--ink); font-size: 1rem; line-height: 1; transition: background .18s, color .18s; }
 .project-card:hover b { border-color: var(--blue); color: white; background: var(--blue); }
 .site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 27px 0; border-top: 1px solid var(--line); color: var(--muted); font: .7rem var(--mono); }
 .site-footer p { margin: 0; }
@@ -91,7 +91,7 @@ dd { margin: 6px 0 0; font-size: .9rem; }
 .media-stage-single .project-image img,
 .media-stage-single .carousel-track img { height: clamp(360px, 48vw, 580px); min-height: 360px; }
 .carousel-controls { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-top: 1px solid var(--line); color: var(--muted); font: .86rem var(--sans); }
-.carousel-controls button { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: transparent; font: 1rem var(--sans); cursor: pointer; }
+.carousel-controls button { display: grid; flex: 0 0 32px; place-items: center; width: 32px; height: 32px; aspect-ratio: 1; padding: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); background: transparent; font: 1rem/1 var(--sans); cursor: pointer; }
 .carousel-controls button:hover { color: var(--white); border-color: var(--signal); background: var(--signal); }
 .media-caption { margin: 0; padding: 12px 14px; color: var(--muted); font: 700 1rem/1.45 var(--sans); }
 .media-empty .media-caption { align-self: end; width: 100%; padding-top: 16px; text-align: left; }

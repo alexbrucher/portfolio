@@ -25,10 +25,10 @@ window.portfolioProjects = [
       },
     ],
     problemLead: "Families need cleaner cooking without equipment that exceeds local manufacturing capabilities.",
-    problem: "I worked with one other engineer to adapt existing cookstove designs for families in Senegal and Sierra Leone. These stoves required both a stronger firepower (to accomidate larger families) and different top shapes to fit the traditional cooking vessels in each country. We also had to balance thermal efficiency with the cost of uninsulated sheet-metal construction, variable tolerances, limited equipment, and intermittent electricity during manufacturing. Observations, interviews, user tests, and partner input from West Wind Energy informed the work; much of that information was collected before my internship.",
+    problem: "I worked with one other engineer to adapt existing cookstove designs for families in Senegal and Sierra Leone. These stoves required greater firepower to accommodate larger families and different top shapes to fit the traditional cooking vessels in each country. We also had to balance thermal efficiency with the cost of uninsulated sheet-metal construction, variable tolerances, limited equipment, and intermittent electricity during manufacturing. Observations, interviews, user tests, and partner input from West Wind Energy informed the work; much of that information was collected before my internship.",
     solutionLead: "Four adapted prototypes exceeded 40% thermal efficiency in testing.",
-    solution: "We adapted exisiting wood- and charcoal-burning BDL stoves to suit the specific needs of each country while maintaining manufacturing processes. Faster heat-up was a design motivation because users sometimes overloaded fuel to accelerate heating, which could undermine emissions performance. The intended selling price was approximately $30 including profit. At the end of my involvement, intended next steps were local manufacture, beta field testing, and sales through West Wind Energy in Freetown, Sierra Leone.",
-    roleLead: "Mechanical Design Intern",
+    solution: "We adapted existing wood- and charcoal-burning BDL stoves to suit the specific needs of each country while maintaining manufacturing processes. Faster heat-up was a design motivation because users sometimes overloaded fuel to accelerate heating, which could undermine emissions performance. The intended selling price was approximately $30 including profit. At the end of my involvement, intended next steps were local manufacture, beta field testing, and sales through West Wind Energy in Freetown, Sierra Leone.",
+    roleLead: "Mechanical Engineering Intern",
     role: "I adapted models in Autodesk Fusion, shared design work with the other engineer, fabricated and assembled prototypes with sheet-metal equipment including stomp shears and brakes, helped optimize thermal efficiency, and conducted testing against applicable ISO clean-cookstove requirements.",
     skillsUsed: [
       "Autodesk Fusion",
@@ -66,8 +66,8 @@ window.portfolioProjects = [
     problem: "Our five-person capstone team developed a replacement buoy-release mechanism for ORPC. Sediment could obstruct the existing release, so we investigated burn wires, rotating cams, and linear actuators and designed tests around likely failure modes.",
     solutionLead: "A servo rotating an Allen key demonstrated ten successful actuations at 1 m/s.",
     solution: "The simpler mechanism used entirely off-the-shelf components and was estimated at under $5,000, compared with over $25,000 for the existing full mechanism. The team also completed overnight immersion in a sediment-filled bucket. A planned sediment-agitation setup could not operate because its pump failed, so comprehensive sediment resistance and long-term reliability were not demonstrated.",
-    roleLead: "Client coordination, test planning, and manufacturing support",
-    role: "I coordinated meetings with ORPC engineers, helped plan validation around failure modes, and supported manufacturing and assembly. The mechanism design was a team accomplishment; I was not the primary component designer.",
+    roleLead: "Client Liaison and Testing Lead",
+    role: "I led client coordination with ORPC engineers and designed flow and sediment testing sequences around primary failure modes. I also supported manufacturing and assembly. The mechanism design was a team accomplishment; I was not the primary component designer.",
     skillsUsed: [
       "Test planning",
       "Failure-mode analysis",
@@ -117,7 +117,7 @@ window.portfolioProjects = [
       { src: "assets/images/OrganDia.png", caption: "Organ perfusion system diagram.", alt: "Organ perfusion system diagram" }
     ],
     problemLead: "A large benchtop research setup needed to become a more compact, modular piece of research hardware.",
-    problem: "The starting setup used peristaltic pumps, stands, and associated equipment for kidney cryopreservation research. It needed clearer organization and a defined orientation to motivate further development towards a commerical prototype.",
+    problem: "The starting setup used peristaltic pumps, stands, and associated equipment for kidney cryopreservation research. It needed clearer organization and a defined orientation to motivate further development toward a commercial prototype.",
     solutionLead: "A modular enclosure and removable rack organized the research setup around the organ and its fluid path.",
     solution: "I repackaged the setup into a compact, modular 3D-printed enclosure, organized cable routing, and designed a removable organ rack plus a concept for disposable components contacting the organ. The rack was intended to support a kidney with minimal contact pressure, let effluent drain into a lower tank, and provide access for perfusion lines delivering cryoprotective agents. Simple geometry supported 3D printing and potential future injection molding, but future manufacturing considerations were not fully explored.",
     roleLead: "Engineering research assistant",
