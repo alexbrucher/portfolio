@@ -26,12 +26,12 @@ nav a { position: relative; padding: 6px 0; color: rgba(255, 255, 255, .78); fon
 nav a.active, nav a:hover { color: var(--white); }
 nav a.active::after { position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background: var(--white); content: ""; }
 .label { margin: 0; color: var(--blue); font: 800 .7rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
-.hero { padding: clamp(52px, 8vw, 92px) 0 62px; border-bottom: 1px solid var(--line); }
+.hero { padding: clamp(36px, 5vw, 58px) 0 42px; border-bottom: 1px solid var(--line); }
 .hero h1 { max-width: 700px; margin: 15px 0 24px; font-size: clamp(2.4rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.05em; font-weight: 900; }
-.hero-statement { max-width: 780px !important; margin-bottom: 20px !important; font-family: var(--sans); font-size: clamp(2.8rem, 5vw, 5rem) !important; line-height: 1.02 !important; letter-spacing: -.035em !important; font-weight: 700 !important; }
+.hero-statement { max-width: 720px !important; margin-bottom: 14px !important; font-family: var(--sans); font-size: clamp(2.25rem, 4vw, 4rem) !important; line-height: 1.04 !important; letter-spacing: -.025em !important; font-weight: 700 !important; }
 .hero-details { display: flex; align-items: baseline; justify-content: space-between; gap: 32px; max-width: 850px; }
-.hero-subtitle { max-width: 580px; margin: 0; color: var(--muted); font: 500 clamp(.95rem, 1.5vw, 1.15rem)/1.5 var(--sans); }
-.hero-availability { display: inline-block; max-width: 100%; margin: 24px 0 0; color: var(--signal); font: 800 1rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.hero-subtitle { max-width: 580px; margin: 0; color: var(--muted); font: 500 clamp(.9rem, 1.25vw, 1rem)/1.45 var(--sans); }
+.hero-availability { display: inline-block; max-width: 100%; margin: 16px 0 0; color: var(--signal); font: 800 .9rem var(--mono); letter-spacing: .04em; text-transform: uppercase; }
 .work-section { padding: 58px 0 112px; }
 .section-heading { display: flex; justify-content: space-between; padding-bottom: 20px; border-bottom: 2px solid var(--ink); }
 .section-note { margin: 0; color: var(--muted); font: .78rem var(--mono); }
