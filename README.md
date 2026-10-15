@@ -10,7 +10,17 @@ A plain HTML, CSS, and JavaScript portfolio. It has no build step and can be ope
 
 ## Edit the portfolio
 
-Most project edits happen in [`content/projects.js`](content/projects.js). Each project is one clearly labeled object. The pages intentionally contain only placeholders so you can add your own words.
+You can edit the site without changing the layout or JavaScript:
+
+| What you want to change | File to edit |
+| --- | --- |
+| Project titles, dates, descriptions, skills, captions, and project images | [`content/projects.js`](content/projects.js) |
+| Homepage title, introduction, and internship availability | [`index.html`](index.html) |
+| About-page story, current role, location, and focus | [`about.html`](about.html) |
+| Email, LinkedIn, and contact-page availability copy | [`contact.html`](contact.html) |
+| Colors, typefaces, spacing, and responsive layout | [`assets/styles.css`](assets/styles.css) |
+
+The home page and project detail pages both read from [`content/projects.js`](content/projects.js), so edit a project there once and both pages update.
 
 ### Add a project
 
@@ -21,13 +31,23 @@ Most project edits happen in [`content/projects.js`](content/projects.js). Each 
 
 ## Add project images
 
-The current project visuals are intentionally neutral placeholders. They keep the layout clean until you choose the right photos or renders.
+Only approved project visuals are referenced. Projects without an approved image or CAD model omit the media stage rather than displaying an empty panel.
 
-1. Create an `images` folder inside `assets`.
-2. Put an image in it, using a simple filename such as `cookstove-test.jpg`.
-3. Open `content/projects.js` and set the project's `image` value to `assets/images/cookstove-test.jpg`.
-4. Update `imageCaption` with a short description of what the image shows.
-5. The image will replace the placeholder on the home page and the project page. Leave `image: ""` until you have an approved image.
+1. Put an approved image in [`assets/images/`](assets/images/), using a simple filename.
+2. Open the matching project in [`content/projects.js`](content/projects.js).
+3. Add the image to the `images` array:
+
+```js
+images: [
+  {
+    src: "assets/images/cookstove-test.jpg",
+    caption: "Short description shown below the image.",
+    alt: "Accessible description of what the image shows",
+  },
+],
+```
+
+The image will appear on the project page and the first image will also appear on its home-page card. Leave `images` absent when no approved image is available.
 
 For best results, use landscape images at least 1600px wide. Keep only images and information you have permission to share.
 
@@ -45,6 +65,33 @@ To add another model later, convert your STL to `.glb` (Blender can do this) and
 4. Keep each section concise and specific: explain the problem, your contribution, evidence of the result, and the tools or tests that got you there.
 5. Update the project's title, organization, category, date, image, and model in the same object when those details change.
 
+Each project is organized in the same order:
+
+```js
+{
+  slug: "unique-url-name",
+  title: "Project title",
+  organization: "Organization or course",
+  date: "Month - Month Year",
+  category: "Short category",
+  // Optional media:
+  model: "assets/models/example.glb",
+  modelCaption: "Caption for the interactive model.",
+  images: [],
+  // Page copy:
+  problemLead: "One-sentence summary.",
+  problem: "Supporting explanation.",
+  solutionLead: "One-sentence result or decision.",
+  solution: "Supporting explanation.",
+  roleLead: "Your specific role.",
+  role: "What you personally did.",
+  skillsUsed: ["Skill one", "Skill two"],
+  cardDescription: "Short summary used on the homepage.",
+},
+```
+
+Keep the surrounding commas and quotation marks when editing individual values. Do not change a project's `slug` unless you also want to change its URL.
+
 ## Add project media
 
 Each project object also controls the media stage at the top of its page:
@@ -52,7 +99,7 @@ Each project object also controls the media stage at the top of its page:
 - `model`: path to a `.glb` CAD model. Use an empty string when there is no model.
 - `modelOrientation`: optional initial model rotation, written as three degrees values for the x, y, and z axes.
 - `image`: path to the project image.
-- `imageCaption`: caption shown below the project image or placeholder.
+- `imageCaption`: legacy caption field for a single project image; prefer the `caption` field inside `images`.
 - `images`: optional array of `{ src, caption, alt }` objects for multiple top-of-page images. One image fills the image stage; two or more become a carousel.
 - `date`: the project date shown as a month and year, or a month-year range when the project spans multiple months.
 - A project with no CAD model and one image uses a full-width image stage. A project with a CAD model uses a half-width image stage alongside the CAD viewer.
@@ -63,7 +110,7 @@ Each lead is shown on its own bold line above the supporting text. Leave a lead 
 
 ## Personal details
 
-- `about.html`: personal story, photo, location, and current-status placeholders.
+- `about.html`: personal story, photo, location, and current-status details.
 - `contact.html`: email, LinkedIn, and availability copy.
 - `index.html`: headline and homepage introduction.
 

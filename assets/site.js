@@ -39,15 +39,16 @@
     const modelCaption = project.modelCaption || interactiveCadCaption;
     const cadMedia = project.model
       ? `<div class="model-panel"><div class="model-toolbar"><span>${interactiveCadCaption}</span><span>Drag to rotate · scroll to zoom</span></div><model-viewer src="${project.model}"${project.modelOrientation ? ` orientation="${project.modelOrientation}"` : ''} alt="${modelCaption}" camera-controls auto-rotate rotation-per-second="18deg" shadow-intensity=".35" exposure=".9" interaction-prompt="auto"><div slot="poster" class="model-loading">Loading CAD model...</div></model-viewer><p class="media-caption">${modelCaption}</p></div>`
-      : `<div class="model-panel media-empty"><p class="media-caption">${interactiveCadCaption}</p></div>`;
+      : '';
     const projectMedia = images.length
       ? images.length > 1
         ? `<div class="project-image image-carousel" data-carousel><div class="carousel-track">${images.map((item) => `<figure><img src="${item.src}" alt="${item.alt || project.title}" /><figcaption>${item.caption || ''}</figcaption></figure>`).join('')}</div><div class="carousel-controls"><button type="button" data-carousel-prev aria-label="Previous project image">←</button><span data-carousel-count>1 / ${images.length}</span><button type="button" data-carousel-next aria-label="Next project image">→</button></div></div>`
         : `<figure class="project-image"><img src="${images[0].src}" alt="${images[0].alt || project.title}" /><figcaption>${images[0].caption || ''}</figcaption></figure>`
-      : `<figure class="project-image media-empty"></figure>`;
-    const media = project.model
-      ? `<section class="media-stage" aria-label="Project media">${cadMedia}${projectMedia}</section>`
-      : `<section class="media-stage media-stage-single" aria-label="Project image">${projectMedia}</section>`;
+      : '';
+    const mediaItems = [cadMedia, projectMedia].filter(Boolean);
+    const media = mediaItems.length
+      ? `<section class="media-stage${mediaItems.length === 1 ? ' media-stage-single' : ''}" aria-label="Project media">${mediaItems.join('')}</section>`
+      : '';
     root.innerHTML = `
       <a class="back-link" href="index.html#projects">← All projects</a>
       <header class="project-header"><div><p class="label">${project.category}</p><h1>${project.title}</h1></div><dl><div><dt>Organization</dt><dd>${project.organization}</dd></div><div><dt>Date</dt><dd>${project.date}</dd></div></dl></header>
